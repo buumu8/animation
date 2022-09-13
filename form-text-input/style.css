@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #25abd9;
+  --primary-dark: #2090b7;
+}
+
+body {
+  background-color: #dcf5ff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.card {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 3px 3px 2px 2px #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-between;
+  padding: 40px;
+  width: 500px;
+}
+
+.form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.input-container {
+  position: relative;
+  width: 90%;
+}
+
+.input-icon {
+  font-size: 25px;
+  position: absolute;
+  left: -45px;
+  top: 70px;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.input-label__name {
+  font-size: 25px;
+  font-family: Montserrat, serif;
+  transition: color 0.2s ease-in-out, font-size 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.input-label::after {
+  content: "";
+  background-color: var(--primary);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: -36px;
+  display: block;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+  transform-origin: 0 0;
+}
+
+.input {
+  font-size: 25px;
+  font-family: Montserrat, serif;
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  top: 65px;
+  border: 0;
+  border-bottom: solid 2px #ddd;
+}
+
+/* FOCUS */
+
+.input:focus {
+  outline: none;
+}
+
+.input:focus + .input-label::after {
+  transform: scaleX(1);
+  curson: none;
+}
+
+.input:focus + .input-label .input-label__name {
+  color: var(--primary);
+  font-size: 20px;
+  transform: translateY(-10px);
+}
+
+.input:focus ~ .input-icon {
+  color: var(--primary);
+  /* font-size: 30px; */
+}
