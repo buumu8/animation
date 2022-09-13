@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #25abd9;
+  --primary-dark: #2090b7;
+}
+
+body {
+  background-color: #b4e0ef;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 5px 15px -4px #000;
+  height: 400px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 220px;
+}
+
+.card__image {
+  background: no-repeat 50% / cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+.card__image--1 {
+  background-image: url("https://i.picsum.photos/id/267/250/400.jpg?hmac=_91EVo5Z7FuNhbww5OA0kxYvPnZFfhJrfmrI7WZusiA");
+}
+.card__image--2 {
+  background-image: url("https://i.picsum.photos/id/732/250/400.jpg?hmac=0zGb4ZFT_-KaMyqRQMV71XVXE-emndOGkLUbiuvRkMY");
+}
+.card__image--3 {
+  background-image: url("https://i.picsum.photos/id/441/250/400.jpg?hmac=_iQ-mzOIuZM0ek0LoYLznKJyYqxGhhhhXE-K-2EIyho");
+}
+
+.card__text-container {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Roboto;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Animation */
+
+.card:hover .card__image {
+  transform: scale(1.05);
+}
+
+.card:hover .card__text-container {
+  opacity: 1;
+  transform: scale(1);
+}

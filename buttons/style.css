@@ -49,7 +49,7 @@ body {
   position: relative;
   /* transform: perspective(1px); */
   z-index: 0;
-  transition: color .2s ease-out;
+  transition: color 0.2s ease-out;
   width: 150px;
 }
 
@@ -61,9 +61,9 @@ body {
   height: 100%;
   bottom: 0;
   left: 0;
-  right; 0;
+  right: 0;
   top: 0;
-  transition: transform .3s ease-out;
+  transition: transform 0.3s ease-out;
   z-index: -1;
 }
 
@@ -74,7 +74,7 @@ body {
 }
 
 .button--one::before {
-  transform-origin: 0 0 ;
+  transform-origin: 0 0;
   transform: scaleX(0);
 }
 
@@ -123,20 +123,19 @@ body {
 }
 
 .button--five:active::before {
-transform: translate(-50%, -50%) rotate(135deg) scaleY(10);
+  transform: translate(-50%, -50%) rotate(135deg) scaleY(10);
 }
 
 .button--six::before {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(135deg)  scaleY(0);
+  transform: translate(-50%, -50%) rotate(135deg) scaleY(0);
   width: 100%;
-
 }
 
 .button--six .button__icon {
   transform: scale(0.8);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
 }
 
 .button--six:hover::before {
