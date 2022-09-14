@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #25abd9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  align-items: center;
+  background: #dcf5ff no-repeat 50% / cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.section:nth-of-type(even) {
+  background-color: #eee;
+}
+
+.loading > div {
+  background-color: var(--primary);
+}
+
+/* Individual Styles */
+
+/* Circles */
+.loading__circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  opacity: 0.7;
+  position: absolute;
+  animation: circle 2s ease-in-out infinite;
+}
+.loading__circle--2 {
+  animation-delay: 1s;
+}
+/* Bars */
+.loading--2 {
+  display: flex;
+  width: 60px;
+  justify-content: space-between;
+}
+
+.loading__bar {
+  animation: bar 1s ease-in-out infinite;
+  height: 60px;
+  width: 8px;
+  opacity: 0.7s;
+}
+
+.loading__bar--2 {
+  animation-delay: 0.2s;
+}
+
+.loading__bar--3 {
+  animation-delay: 0.4s;
+}
+
+.loading__bar--4 {
+  animation-delay: 0.6s;
+}
+
+.loading__bar--5 {
+  animation-delay: 0.8s;
+}
+
+/* Dots */
+
+.loading__dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  animation: dots 1.5s ease-in-out infinite;
+}
+
+.loading__dot--2 {
+  animation-delay: 0.2s;
+}
+
+.loading__dot--3 {
+  animation-delay: 0.4s;
+}
+
+.loading--3 {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+/* Dots Sweep */
+
+.loading__dot-sweep {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  animation: dotSweep 2s ease-in-out infinite;
+}
+
+.loading__dot-sweep--2 {
+  animation-delay: 0.1s;
+}
+
+.loading__dot-sweep--3 {
+  animation-delay: 0.2s;
+}
+
+.loading__dot-sweep--4 {
+  animation-delay: 0.3s;
+}
+
+.loading__dot-sweep--5 {
+  animation-delay: 0.4s;
+}
+
+.loading--4 {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+/* Keyframes */
+@keyframes circle {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+
+@keyframes bar {
+  0% {
+    scale: 1 0.5;
+  }
+  25% {
+    scale: 1 1;
+  }
+
+  50% {
+    scale: 1 0.5;
+  }
+
+  100% {
+    scale: 1 0.5;
+  }
+}
+
+@keyframes dots {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  40% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes dotSweep {
+  0%,
+  20% {
+    opacity: 0;
+    translate: -400% 0;
+  }
+
+  30%,
+  70% {
+    opacity: 0.75;
+    translate: 0 0;
+  }
+  80%,
+  100% {
+    opacity: 0;
+    translate: 400% 0;
+  }
+}

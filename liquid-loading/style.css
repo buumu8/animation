@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #25abd9;
+  --background: #eee;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  height: 100vh;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border: solid 4px var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.circle::after {
+  animation: liquid 4s ease-in-out forwards;
+  content: "";
+  background-color: var(--background);
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  border-radius: 40%;
+}
+
+.circle__icon {
+  color: var(--background);
+  font-size: 70px;
+}
+
+@keyframes liquid {
+  0% {
+    translate: -50% 0;
+    rotate: 0deg;
+  }
+  100% {
+    translate: -50% -100%;
+    rotate: 500deg;
+  }
+}

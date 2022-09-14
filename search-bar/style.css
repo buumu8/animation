@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #25abd9;
+}
+
+body {
+  background-color: var(--primary);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 500px;
+  flex-wrap: wrap;
+}
+
+.search {
+  background-color: #222;
+  height: 60px;
+  display: flex;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search__button {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.search__icon {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.search__input {
+  max-width: 0;
+  width: 240px;
+  border: none;
+  padding: 0;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  background: none;
+  transition: max-width 0.5s ease-in-out, padding 0.5s ease-in-out;
+  color: white;
+}
+
+/* Hover */
+.search:hover .search__button {
+  color: black;
+  background-color: white;
+}
+
+.search:hover .search__input {
+  max-width: 240px;
+  padding: 0 6px;
+}
