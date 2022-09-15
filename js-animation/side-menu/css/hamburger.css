@@ -1,0 +1,33 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  height: 35px;
+  width: 50px;
+  justify-content: space-between;
+}
+
+.burger__inner {
+  background-color: var(--primary);
+  height: 5px;
+  width: 50px;
+  display: block;
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Hamburger 1 */
+.burger__inner--2 {
+  transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+/* ACTIVE: Hamburger 1 */
+.burger--active .burger__inner--1 {
+  transform: translateY(15px) rotate(45deg);
+}
+
+.burger--active .burger__inner--2 {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.burger--active .burger__inner--3 {
+  transform: translateY(-15px) rotate(-45deg);
+}

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --primary: #25abd9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: #06435c;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 350px;
+  width: 500px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  height: 35px;
+  width: 50px;
+  justify-content: space-between;
+}
+
+.burger__inner {
+  background-color: var(--primary);
+  height: 5px;
+  width: 50px;
+  display: block;
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Hamburger 1 */
+.burger--1 .burger__inner--2 {
+  transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+/* Hamburger 2 */
+.burger--2 .burger__inner--1 {
+  transition: rotate 0.1s, translate 0.1s, transform 0.1s 0.2s ease-in-out;
+}
+
+/* Hamburger 3 */
+.burger--3 .burger__inner--1,
+.burger--3 .burger__inner--3 {
+  transition: rotate 0.1s, translate 0.1s, transform 0.1s 0.2s ease-in-out;
+}
+
+.burger--3 .burger__inner--2 {
+  transition-delay: 0.1s;
+}
+
+/* ACTIVE: Hamburger 1 */
+.burger--active.burger--1 .burger__inner--1 {
+  transform: translateY(15px) rotate(45deg);
+}
+
+.burger--active.burger--1 .burger__inner--2 {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.burger--active.burger--1 .burger__inner--3 {
+  transform: translateY(-15px) rotate(-45deg);
+}
+
+/* ACTIVE: Hamburger 2 */
+.burger--active.burger--2 .burger__inner--1 {
+  transform: translateY(15px);
+  rotate: 45deg;
+  translate: 10px 5px;
+  transition: transform 0.1s ease-in-out, rotate 0.1s 0.2s, translate 0.1s 0.2s;
+}
+
+.burger--active.burger--2 .burger__inner--2 {
+  transform: scale(0);
+}
+
+.burger--active.burger--2 .burger__inner--3 {
+  transform: translateY(-15px);
+  rotate: -45deg;
+  translate: 10px -5px;
+  transition: transform 0.1s ease-in-out, rotate 0.1s 0.2s, translate 0.1s 0.2s;
+}
+
+/* ACTIVE: Hamburger 3 */
+.burger--active.burger--3 .burger__inner--1 {
+  transform: translate(15px, 0px);
+  rotate: 135deg;
+  translate: 10px 5px;
+  transition: transform 0.1s ease-in-out, rotate 0.1s 0.2s, translate 0.1s 0.2s;
+}
+
+.burger--active.burger--3 .burger__inner--2 {
+  transform: scale(0);
+}
+
+.burger--active.burger--3 .burger__inner--3 {
+  transform: translate(12px, 0px);
+  rotate: 225deg;
+  translate: 10px -5px;
+  transition: transform 0.1s ease-in-out, rotate 0.1s 0.2s, translate 0.1s 0.2s;
+}
