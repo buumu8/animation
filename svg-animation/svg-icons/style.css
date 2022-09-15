@@ -1,0 +1,139 @@
+:root {
+  --primary: #25abd9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+}
+
+.icon {
+  width: 200px;
+}
+
+.icon path {
+  fill: transparent;
+  stroke: #777;
+  stroke-width: 10;
+}
+
+.icon__svg--tree path {
+  stroke-dasharray: 1860;
+  stroke-dashoffset: 0;
+}
+
+.icon__svg--tree:hover path {
+  animation: treeAnim 2s linear forwards;
+}
+
+.icon__svg--bolt path {
+  stroke-dasharray: 1550;
+  stroke-dashoffset: 0;
+}
+
+.icon__svg--bolt:hover path {
+  animation: boltAnim 2s linear forwards;
+}
+
+.icon__svg--glass path {
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 0;
+}
+
+.icon__svg--glass:hover path {
+  animation: glassAnim 2s linear forwards;
+}
+/* Animation */
+
+@keyframes treeAnim {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 1860;
+    stroke: #777;
+  }
+
+  41% {
+    stroke: var(--primary);
+  }
+
+  80% {
+    fill: transparent;
+    stroke-dashoffset: 3720;
+  }
+  100% {
+    fill: var(--primary);
+    stroke: var(--primary);
+    stroke-dashoffset: 3720;
+  }
+}
+
+@keyframes boltAnim {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 1550;
+    stroke: #777;
+  }
+
+  41% {
+    stroke: var(--primary);
+  }
+
+  80% {
+    fill: transparent;
+    stroke-dashoffset: 3100;
+  }
+  100% {
+    fill: var(--primary);
+    stroke: var(--primary);
+    stroke-dashoffset: 3100;
+  }
+}
+
+@keyframes glassAnim {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 2100;
+    stroke: #777;
+  }
+
+  41% {
+    stroke: var(--primary);
+  }
+
+  80% {
+    fill: transparent;
+    stroke-dashoffset: 4200;
+  }
+  100% {
+    fill: var(--primary);
+    stroke: var(--primary);
+    stroke-dashoffset: 4200;
+  }
+}

@@ -1,0 +1,77 @@
+:root {
+  --primary: #25abd9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+}
+
+.svg {
+  height: 50%;
+}
+
+.svg__sun {
+  animation: sunAnim 2s ease-in-out infinite alternate;
+  transform: scale(0.8);
+  transform-origin: 80% 20%;
+}
+
+.svg__eye {
+  animation: eyesAnim 5s ease-in-out infinite;
+}
+
+.svg__note {
+  animation: noteAnim 1s ease-in-out infinite alternate;
+  opacity: 1;
+}
+
+.svg__note--large {
+  animation-delay: 0.5s;
+}
+
+/* Keyframes */
+
+@keyframes sunAnim {
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes eyesAnim {
+  20% {
+    transform: translateX(30px);
+  }
+
+  40% {
+    transform: translateX(30px);
+  }
+
+  60% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes noteAnim {
+  100% {
+    opacity: 0;
+  }
+}
